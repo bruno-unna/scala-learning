@@ -11,9 +11,14 @@ object Lists {
     case _ => throw new NoSuchElementException
   }
 
-  //  @tailrec
-  def length[T](input: List[T]): Int = input match {
-    case Nil => 0
-    case x :: xs => 1 + length(xs)
+  def length[T](input: List[T]): Int = {
+
+    @tailrec
+    def calculateLength(currentLength: Int, input: List[T]): Int = input match {
+      case Nil => currentLength
+      case x :: xs => calculateLength(currentLength + 1, xs)
+    }
+
+    calculateLength(0, input)
   }
 }
