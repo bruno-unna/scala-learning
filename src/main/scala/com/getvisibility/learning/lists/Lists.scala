@@ -12,13 +12,12 @@ object Lists {
   }
 
   def length[T](input: List[T]): Int = {
-
     @tailrec
-    def calculateLength(currentLength: Int, input: List[T]): Int = input match {
+    def recursiveLength(currentLength: Int, input: List[T]): Int = input match {
       case Nil => currentLength
-      case x :: xs => calculateLength(currentLength + 1, xs)
+      case x :: xs => recursiveLength(currentLength + 1, xs)
     }
 
-    calculateLength(0, input)
+    recursiveLength(0, input)
   }
 }
