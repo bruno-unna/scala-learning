@@ -4,6 +4,12 @@ import scala.annotation.tailrec
 
 object Lists {
 
+  /** Finds and return last element of the list.
+   *
+   * @param input list whose length is interesting
+   * @tparam T type of the elements of the list
+   * @return return last element of the list
+   */
   @tailrec
   def last[T](input: List[T]): T = input match {
     case x :: Nil => x
