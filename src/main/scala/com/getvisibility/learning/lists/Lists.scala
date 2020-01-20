@@ -11,5 +11,9 @@ object Lists {
     case _ => throw new NoSuchElementException
   }
 
-  def length[T](input: List[T]): Int = ???
+  //  @tailrec
+  def length[T](input: List[T]): Int = input match {
+    case Nil => 0
+    case x :: xs => 1 + length(xs)
+  }
 }
