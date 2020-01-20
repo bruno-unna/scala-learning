@@ -32,7 +32,4 @@ object Lists {
 
     recursiveLength(0, input)
   }
-
-  /** This method does what its name says */
-  def nothing(input: Int): Int = 0
 }
