@@ -11,6 +11,12 @@ object Lists {
     case _ => throw new NoSuchElementException
   }
 
+  /** Calculate the length of a given list.
+   *
+   * @param input list whose length is interesting
+   * @tparam T type of the elements of the list
+   * @return length of the list
+   */
   def length[T](input: List[T]): Int = {
     @tailrec
     def recursiveLength(currentLength: Int, input: List[T]): Int = input match {
