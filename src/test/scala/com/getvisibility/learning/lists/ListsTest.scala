@@ -17,10 +17,14 @@ class ListsTest extends AnyWordSpec {
       }
     }
   }
-  "A list of chars" when {
+  "A list of strings" when {
     "populated" should {
       "return its last element" in {
         assert(Lists.last(List("a", "b", "c")) == "c")
+      }
+      "return the number of elements" in {
+        assert(Lists.length(List("one", "two", "three")) == 3)
+        assert(Lists.length(List()) == 0)
       }
     }
   }

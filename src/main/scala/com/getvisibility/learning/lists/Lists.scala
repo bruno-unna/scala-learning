@@ -10,4 +10,6 @@ object Lists {
     case _ :: xs => last(xs)
     case _ => throw new NoSuchElementException
   }
+
+  def length[T](input: List[T]): Int = ???
 }
