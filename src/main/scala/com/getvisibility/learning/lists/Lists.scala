@@ -34,6 +34,9 @@ object Lists {
   }
 
   /** Flatten a nested list structure.
+   *
+   * @param input possibly nested list
+   * @return flattened list
    */
   def flatten(input: List[Any]): List[Any] = ???
 }
