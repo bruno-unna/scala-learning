@@ -30,6 +30,7 @@ class ListsTest extends AnyWordSpec {
     "A nested list of mixed integers and lists" should {
       "flatten its internal lists" in {
         assert(Lists.flatten(List(1, List(1, 2))) == List(1, 1, 2))
+        assert(Lists.flatten(List(1, List(1, 2), 3)) == List(1, 1, 2, 3))
       }
     }
   }
