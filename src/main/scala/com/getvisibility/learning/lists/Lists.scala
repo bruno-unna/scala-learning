@@ -34,10 +34,6 @@ object Lists {
   }
 
   /** Flatten a nested list structure.
-   * List(1, 2, 3) => List(1, 2, 3)
-   * List(List(1, 2)) => List(1, 2)
-   * List() => List()
-   * List(1, List(1, 2)) => List(1, 1, 2)
    */
   def flatten(input: List[Any]): List[Any] = ???
 }
