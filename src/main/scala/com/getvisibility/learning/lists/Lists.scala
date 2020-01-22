@@ -45,4 +45,14 @@ object Lists {
       case _ => x :: flatten(xs)
     }
   }
+
+  /** Pack consecutive duplicates of list elements into sublists.
+   * If a list contains repeated elements they should be placed in separate sublists.
+   *
+   * @param input list with potentially repeated subsequences
+   * @tparam T type of elements of the list
+   * @return list with lists containing the discovered subsequences
+   */
+  def pack[T](input: List[T]): List[List[T]] = ???
+
 }
