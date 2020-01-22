@@ -53,6 +53,21 @@ object Lists {
    * @tparam T type of elements of the list
    * @return list with lists containing the discovered subsequences
    */
-  def pack[T](input: List[T]): List[List[T]] = ???
+  def pack[T](input: List[T]): List[List[T]] = {
+    def packRec(acc: List[T], input: List[T]): List[List[T]] = input match {
+      case Nil => Nil
+      case x :: xs =>
+        xs match {
+          case Nil => List(acc)
+          case y :: _ =>
+            if (x == y) packRec(x :: acc, xs)
+            else acc :: packRec(List(y), xs)
+        }
+    }
 
+    val acc = if (input.isEmpty) Nil
+    else input.head :: Nil
+
+    packRec(acc, input)
+  }
 }
